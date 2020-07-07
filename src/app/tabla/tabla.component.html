@@ -1,0 +1,32 @@
+<h1 class="mt-4">Lista de empleados</h1>
+<hr/>
+<div class="row">
+    <div class="col">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-success">
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido Paterno</th>
+                        <th scope="col">Apellido Materno</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarios">
+                        <th scope="row">{{ usuario.id }}</th>
+                        <td scope="row">{{ usuario.data.nombre }}</td>
+                        <td scope="row">{{ usuario.data.apellidoPat }}</td>
+                        <td scope="row">{{ usuario.data.apellidoMat }}</td>
+                        <td>{{ usuario.data.email }}</td>
+                        <td>
+                        <button class="btn btn-danger" type="button" (click)="borrar( usuario.id )"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

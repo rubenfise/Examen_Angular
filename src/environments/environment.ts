@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlServicios: 'http://localhost:8071',
+  urlFireBase: 'https://ng-complete-guide-81470.firebaseio.com/empleados'
 };
 
 /*

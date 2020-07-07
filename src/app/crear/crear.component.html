@@ -1,0 +1,40 @@
+<h1>Agregar empleado</h1>
+<hr>
+<form ngNativeValidate [formGroup]="forma" (ngSubmit)="enviar()">
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field appearance="outline" class="largoInput">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" formControlName="nombre">
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field appearance="outline" class="largoInput">
+                <mat-label>Apellido Paterno</mat-label>
+                <input matInput type="text" formControlName="apellidoPat" >
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <mat-form-field appearance="outline" class="largoInput">
+                <mat-label>Apellido Materno</mat-label>
+                <input matInput type="text" formControlName="apellidoMat" >
+            </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-form-field appearance="outline" class="largoInput">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email">
+            </mat-form-field>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-10"></div>
+        <div class="col-2">
+            <button type="submit" class="btn btn-block btn-success" [disabled]="!forma.valid">Guardar</button>
+        </div>
+    </div>
+</form>
